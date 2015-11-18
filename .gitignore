@@ -1,0 +1,11 @@
+#Exclude backups, archives and logs
+*.tar
+*.gz
+*.log
+*.tar.gz
+*.zip
+*.rar
+*.tgz
+
+#Exclude IDE files
+.idea
