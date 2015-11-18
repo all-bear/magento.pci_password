@@ -6,10 +6,20 @@
         </AllBear_PciAuth>
     </modules>
     <global>
+        <blocks>
+            <allbear_pciauth>
+                <class>AllBear_PciAuth_Block</class>
+            </allbear_pciauth>
+        </blocks>
         <models>
             <allbear_pciauth>
                 <class>AllBear_PciAuth_Model</class>
             </allbear_pciauth>
+            <customer>
+                <rewrite>
+                    <customer>AllBear_PciAuth_Model_Customer_Customer</customer>
+                </rewrite>
+            </customer>
         </models>
         <helpers>
             <allbear_pciauth>
@@ -53,4 +63,11 @@
             </modules>
         </translate>
     </adminhtml>
+    <default>
+        <allbear_pciauth>
+            <settings>
+                <password_min_length>8</password_min_length>
+            </settings>
+        </allbear_pciauth>
+    </default>
 </config>

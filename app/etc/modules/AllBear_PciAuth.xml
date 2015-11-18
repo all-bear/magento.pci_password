@@ -4,6 +4,9 @@
         <AllBear_PciAuth>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Mage_Customer/>
+            </depends>
         </AllBear_PciAuth>
     </modules>
 </config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customer_account_create>
+        <reference name="before_body_end">
+            <block type="allbear_pciauth/template" template="allbear/pciauth/customer/form/register/additional_js.phtml"/>
+        </reference>
+    </customer_account_create>
+</layout>
