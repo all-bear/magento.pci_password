@@ -33,7 +33,7 @@
                             <show_in_store>1</show_in_store>
                         </enabled>
                         <password_min_length>
-                            <label>Minimum password length</label>
+                            <label>Passwords minimum length</label>
                             <validate>validate-digits</validate>
                             <frontend_type>text</frontend_type>
                             <sort_order>20</sort_order>
