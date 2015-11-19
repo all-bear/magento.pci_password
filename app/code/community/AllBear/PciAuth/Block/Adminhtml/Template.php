@@ -2,7 +2,7 @@
 
 class AllBear_PciAuth_Block_Adminhtml_Template extends Mage_Adminhtml_Block_Template
 {
-    private $_helper;
+    protected $_helper;
 
     protected function _construct()
     {
