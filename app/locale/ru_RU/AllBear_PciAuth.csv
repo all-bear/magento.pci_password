@@ -15,3 +15,7 @@
 "Lock time","Время блокировки"
 "Account deactivation period if not active for more than","Приудительный выход из аккаунта, если не активен в течении"
 "Your session was expired","Ваша сессия истекла"
+"Password history","Журнал паролей"
+"Password was already used by you some times ago. Use new password.","Этот пароль уже использовался вами ранее."
+"Customer Id","Id Пользователя"
+"Password hash","Хеш пароля"

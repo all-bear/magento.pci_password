@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <action method="addTab">
+                <name>my_custom_tab</name>
+                <block>allbear_pciauth/adminhtml_customer_tab</block>
+            </action>
+        </reference>
+        <block type="allbear_pciauth/adminhtml_customer_passwordHistory" name="allbear_pciauth_customer_password_history" />
+    </adminhtml_customer_edit>
+</layout>

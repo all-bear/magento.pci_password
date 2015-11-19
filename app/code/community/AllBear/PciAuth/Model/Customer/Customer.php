@@ -70,11 +70,60 @@ class AllBear_PciAuth_Model_Customer_Customer extends Mage_Customer_Model_Custom
             $errors[] = Mage::helper('customer')->__('The minimum password length is %s', $minPasswordLength);
         }
 
+        if ($this->_isPasswordWasAlreadyInUse()) {
+            $errors[] = $this->_helper->__('Password was already used by you some times ago. Use new password.');
+        }
+
         if (empty($errors)) {
             return true;
         }
 
         return $errors;
+    }
+
+    protected function _afterSave()
+    {
+        parent::_afterSave();
+
+        if (!$this->hasDataChanges()) {
+            return $this;
+        }
+
+        $this->_updatePasswordHistory();
+
+        return $this;
+    }
+
+    protected function _updatePasswordHistory()
+    {
+        if (!$this->dataHasChangedFor('password_hash')) {
+            return $this;
+        }
+
+        $passwordHistory = Mage::getModel('allbear_pciauth/customer_passwordHistory');
+        $passwordHistory->setData(array(
+            'customer_id' => $this->getId(),
+            'password_hash' => $this->getPasswordHash(),
+            'created_at' => Mage::getModel('core/date')->timestamp()
+        ));
+        $passwordHistory->save();
+    }
+
+    protected function _isPasswordWasAlreadyInUse()
+    {
+        $used = false;
+
+        $passwordHistory = Mage::getModel('allbear_pciauth/customer_passwordHistory');
+
+        foreach ($passwordHistory->getAllPasswordHashesForCustomer($this) as $hash) {
+            $used = Mage::helper('core')->validateHash($this->getPassword(), $hash);
+
+            if ($used) {
+                break;
+            }
+        }
+
+        return $used;
     }
     
     protected function _handleUnlock()

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <AllBear_PciAuth>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </AllBear_PciAuth>
     </modules>
     <global>
@@ -14,7 +14,16 @@
         <models>
             <allbear_pciauth>
                 <class>AllBear_PciAuth_Model</class>
+                <resourceModel>allbear_pciauth_resource</resourceModel>
             </allbear_pciauth>
+            <allbear_pciauth_resource>
+                <class>AllBear_PciAuth_Model_Resource</class>
+                <entities>
+                    <customer_password_history_entity>
+                        <table>allbear_pciauth_customer_password_history</table>
+                    </customer_password_history_entity>
+                </entities>
+            </allbear_pciauth_resource>
             <customer>
                 <rewrite>
                     <customer>AllBear_PciAuth_Model_Customer_Customer</customer>
@@ -74,6 +83,13 @@
                 </AllBear_PciAuth>
             </modules>
         </translate>
+        <layout>
+            <updates>
+                <allbear_pciauth>
+                    <file>allbear_pciauth.xml</file>
+                </allbear_pciauth>
+            </updates>
+        </layout>
     </adminhtml>
     <default>
         <allbear_pciauth>
