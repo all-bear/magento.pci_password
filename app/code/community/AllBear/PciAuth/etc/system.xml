@@ -44,6 +44,44 @@
                                 <enabled>1</enabled>
                             </depends>
                         </password_min_length>
+                        <login_max_tries>
+                            <label>The number of unsuccessful login tries to customer lock</label>
+                            <validate>validate-digits</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </login_max_tries>
+                        <login_tries_reset_time>
+                            <label>Time interval to reset the failed login tries counter</label>
+                            <comment>in minutes</comment>
+                            <validate>validate-digits</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </login_tries_reset_time>
+                        <lockout_effective_period>
+                            <label>Lockout effective period</label>
+                            <comment>in minutes</comment>
+                            <validate>validate-digits</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </lockout_effective_period>
                     </fields>
                 </settings>
             </groups>

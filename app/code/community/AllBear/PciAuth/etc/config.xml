@@ -29,7 +29,8 @@
         <resources>
             <allbear_pciauth_setup>
                 <setup>
-                    <module>AllBear_PciAuth_Helper</module>
+                    <module>AllBear_PciAuth</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
                 </setup>
             </allbear_pciauth_setup>
         </resources>
@@ -67,6 +68,9 @@
         <allbear_pciauth>
             <settings>
                 <password_min_length>8</password_min_length>
+                <login_max_tries>6</login_max_tries>
+                <login_tries_reset_time>10</login_tries_reset_time>
+                <lockout_effective_period>60</lockout_effective_period>
             </settings>
         </allbear_pciauth>
     </default>
