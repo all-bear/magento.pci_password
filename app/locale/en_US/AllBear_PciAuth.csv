@@ -13,3 +13,5 @@
 "Locked","Locked"
 "This account is locked because of too much unsuccessful login tries.","This account is locked because of too much unsuccessful login tries."
 "Lock time","Lock time"
+"Accounts will be deactivated if not active for more than","Accounts will be deactivated if not active for more than"
+"Your session was expired","Your session was expired"

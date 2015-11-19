@@ -82,6 +82,19 @@
                                 <enabled>1</enabled>
                             </depends>
                         </lockout_effective_period>
+                        <account_deaction_period>
+                            <label>Accounts will be deactivated if not active for more than</label>
+                            <comment>in minutes</comment>
+                            <validate>validate-digits</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </account_deaction_period>
                     </fields>
                 </settings>
             </groups>

@@ -13,3 +13,5 @@
 "Locked","Заблокирован"
 "This account is locked because of too much unsuccessful login tries.","Этот аккаунт заблокирован из за превышения неудачных попыток входа"
 "Lock time","Время блокировки"
+"Account deactivation period if not active for more than","Приудительный выход из аккаунта, если не активен в течении"
+"Your session was expired","Ваша сессия истекла"

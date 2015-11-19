@@ -52,6 +52,17 @@
                 </allbear_pciauth>
             </updates>
         </layout>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <allbear_pciauth_controller_action_predispatch>
+                        <type>singleton</type>
+                        <class>allbear_pciauth/observer</class>
+                        <method>deactivateNotActiveCustomer</method>
+                    </allbear_pciauth_controller_action_predispatch>
+                </observers>
+            </controller_action_predispatch>
+        </events>
     </frontend>
     <adminhtml>
         <translate>
@@ -71,6 +82,7 @@
                 <login_max_tries>6</login_max_tries>
                 <login_tries_reset_time>10</login_tries_reset_time>
                 <lockout_effective_period>60</lockout_effective_period>
+                <account_deaction_period>60</account_deaction_period>
             </settings>
         </allbear_pciauth>
     </default>
