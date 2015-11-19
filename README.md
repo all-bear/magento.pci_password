@@ -18,3 +18,7 @@ Account deactivation, password history, password and login length are custom dev
 ![alt tag](http://dl2.joxi.net/drive/0013/3337/908553/151119/fcf58a35a5.png)
 ![alt tag](http://dl1.joxi.net/drive/0013/3337/908553/151119/ca7ca0a369.png)
 ![alt tag](http://dl2.joxi.net/drive/0013/3337/908553/151119/f0bdeffa10.png)
+
+## Compatibility
+
+Tested with Magento 1.9.2
