@@ -11,6 +11,10 @@ class AllBear_PciAuth_Model_Observer extends Varien_Object
 
     public function deactivateNotActiveCustomer()
     {
+        if (!$this->_helper->isEnabled()) {
+            return $this;
+        }
+
         $session = Mage::getSingleton('customer/session');
 
         if (!$session->isLoggedIn()) {
@@ -26,10 +30,13 @@ class AllBear_PciAuth_Model_Observer extends Varien_Object
             if ($deactivationPeriod < $this->_getActivityMinutesInterval($currentDate, $lastActivityDate)) {
                 $session->logout();
                 Mage::getSingleton('core/session')->addNotice('Your session was expired');
+                return $this;
             }
         }
 
         $session->setLastActivityDate($currentDate);
+
+        return $this;
     }
 
     protected function _getActivityMinutesInterval($currentDate, $lastActivityDate)
