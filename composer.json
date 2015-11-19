@@ -1,0 +1,21 @@
+{
+    "name": "allbear/pciauth",
+    "type": "magento-module",
+    "version": "0.2.0",
+    "description": "Magento QMage Feeder",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/etc/modules/AllBear_PciAuth.xml",                             "app/etc/modules/AllBear_PciAuth.xml"],
+            ["app/code/community/AllBear/PciAuth/",                             "app/code/community/AllBear/PciAuth/"],
+            ["app/design/adminhtml/default/default/layout/allbear_pciauth.xml", "app/design/adminhtml/default/default/layout/allbear_pciauth.xml"],
+            ["app/design/adminhtml/default/default/template/allbear/pciauth",   "app/design/adminhtml/default/default/template/allbear/pciauth"],
+            ["app/design/frontend/base/default/layout/allbear_pciauth.xml",     "app/design/frontend/base/default/layout/allbear_pciauth.xml"],
+            ["app/design/frontend/base/default/template/allbear/pciauth",       "app/design/frontend/base/default/template/allbear/pciauth"],
+            ["app/locale/en_US/AllBear_PciAuth.xml",                            "app/locale/en_US/AllBear_PciAuth.xml"],
+            ["app/locale/ru_RU/AllBear_PciAuth.xml",                            "app/locale/ru_RU/AllBear_PciAuth.xml"]
+        ]
+    }
+}
