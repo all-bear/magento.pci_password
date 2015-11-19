@@ -13,4 +13,8 @@
     <customer_account_login>
         <update handle="validation_password_rewrite" />
     </customer_account_login>
+
+    <customer_account_edit>
+        <update handle="validation_password_rewrite" />
+    </customer_account_edit>
 </layout>
