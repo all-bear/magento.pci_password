@@ -1,7 +1,7 @@
 {
     "name": "allbear/pciauth",
     "type": "magento-module",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Magento QMage Feeder",
     "require": {
         "magento-hackathon/magento-composer-installer": "*"

@@ -22,7 +22,7 @@ class AllBear_PciAuth_Block_Adminhtml_Customer_Tab extends AllBear_PciAuth_Block
 
     public function canShowTab()
     {
-        return true;
+        return $this->_helper->isEnabled();
     }
 
     public function isHidden()
