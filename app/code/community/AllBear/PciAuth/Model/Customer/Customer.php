@@ -4,7 +4,7 @@ class AllBear_PciAuth_Model_Customer_Customer extends Mage_Customer_Model_Custom
 {
     const NATIVE_INVALID_PASSWORD_LENGTH_MESSAGE      = 'The minimum password length is 6';
     const EXCEPTION_TOO_MUCH_UNSUCCESSFUL_LOGIN_TRIES = 10;
-    
+
     private $_helper;
 
     # I don't know why in Mage_Customer_Model_Customer do they do this method public in Magento 1.9.2
@@ -16,9 +16,13 @@ class AllBear_PciAuth_Model_Customer_Customer extends Mage_Customer_Model_Custom
 
     public function authenticate($login, $password)
     {
+        if (!$this->_helper->isEnabled()) {
+            return parent::authenticate($login, $password);
+        }
+
         $this->loadByEmail($login);
 
-        if (!$this->_helper->isEnabled() || !$this->getId()) {
+        if (!$this->getId()) {
             return parent::authenticate($login, $password);
         }
 
