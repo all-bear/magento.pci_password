@@ -134,6 +134,7 @@ class AllBear_PciAuth_Model_Customer_Customer extends Mage_Customer_Model_Custom
 
         if ($this->_helper->getLockoutEffectivePeriod() < $this->_getMinutesFromLock()) {
             $this->setIsLocked(false);
+            $this->setUnsuccessfulLoginTries(0);
         }
     }
 
